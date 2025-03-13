@@ -1,0 +1,303 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: 'Syne', sans-serif;
+}
+
+body{
+  width: 100%
+}
+h2 {
+  padding: 1rem;
+}
+
+#tabs {
+  text-align: center;
+}
+
+#nav,
+#logo {
+  display: inline-block;
+  padding: 1rem;
+}
+
+#nav {
+  text-align: right;
+}
+
+
+#logo {
+  width: 100px;
+  height: 95px;
+  float: left;
+}
+
+h4{
+  padding: 1rem;
+}
+
+.left,
+.right {
+  display: inline-block;
+  padding: 1rem;
+}
+
+.task {
+  text-align: center;
+}
+
+p{
+  padding-bottom: 1rem;
+}
+
+
+.button{
+  font-size: 12px;
+  font-weight: 100;
+  letter-spacing: 1px;
+  padding: 10px 14px;
+  outline: 0;
+  border: 0px solid black;
+  cursor: pointer;
+  position: relative;
+/*   background-color: rgba(0, 0, 0, 0); */
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  background-color: lightblue;
+}
+/* 
+.button:after {
+  content: "";
+  background-color: lightblue;
+  width: 100%;
+  z-index: -1;
+  position: absolute;
+  height: 100%;
+  top: 7px;
+  left: 7px;
+  transition: 0.2s;
+}
+
+.button:hover:after {
+  top: 0px;
+  left: 0px;
+} */
+
+
+#divider {
+  width: 99%;
+  padding-left: 4rem;
+  padding-right: 4rem;
+
+}
+
+.search-form {
+  margin: 15px 0;
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+}
+
+.search-form i {
+  position: absolute;
+  font-size: 26px;
+  width: 36px;
+  height: 36px;
+  padding: 8px;
+}
+
+.search-form input {
+  width: 100%;
+  padding: 8px 12px;
+  padding-left: 42px;
+  font-size: 16px;
+  border: 1px solid cornflowerblue;
+  border-radius: 4px;
+}
+
+.search-form input:focus {
+  outline: none;
+  border: 1px solid black;
+}
+
+.search-results .result-items{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    padding: 1rem 1rem;
+    border-bottom: 0.5px solid black;
+}
+
+
+/*  front page thing */
+
+/* navbar */
+#nav{
+  width:100%;
+  
+}
+
+.linknav{
+  padding: 20px;
+  text-decoration: none;
+  color: #212121
+}
+
+.profileimg{
+  width:40px;
+  height: 40px;
+  position: relative;
+  top: 10px;
+}
+
+/*  main center thing*/
+
+.main-center{
+  width: 100%;
+  text-align: center;
+  margin: auto;
+  top: 10%;
+}
+
+.sign-up{
+  background-color: #3a3399;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  margin-top: 2%;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  width: 20%;
+  cursor: pointer;
+}
+
+.backgroundimg{
+ /* background-size: cover; */
+  background-repeat: no-repeat;
+  height: 60vh;
+  width: 80%;
+  object-fit: cover; 
+
+}
+
+.main-center{
+    position: relative;
+/*     display: inline-block; /* Make the width of box same as image */ */
+}
+.main-center .text{
+    position: absolute;
+    z-index: 999;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+
+}
+
+/* Bottom Part */
+
+.intro{
+  width: 100%;
+
+  height: 45%;
+  padding: 150px;
+  background-color: #E8E6E6;
+
+  
+}
+
+.intro .text{
+  width: 70%;
+  background-color: #fff;
+/*   padding: 100px; */
+  padding-left: 130px;
+  padding-right: 130px;
+  padding-top: 90px;
+  padding-bottom: 90px;
+  margin-left: 30%;
+
+}
+
+.intro .text h1{
+  width: 80%
+}
+
+/* very bottom part */
+
+.team{
+  margin: auto;
+  width: 100%;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.info{
+  display: flex;
+  flex-direction: row;
+  width: 100%
+}
+
+.team .deep-info{
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+}
+
+.learn{
+  width: 50%;
+}
+
+.part{
+  display: flex;
+  flex-direction: column;
+  width: 33%
+}
+
+
+.part p{
+  width: 75%;
+  text-align: center;
+  margin: auto;
+}
+
+/* TASKS PAGE  */
+
+
+
+/* PRIZES @page */
+
+
+.teams {
+    display: flex;
+    flex-direction: row;
+    width: 100;
+    padding-bottom: 50px;
+  }
+
+  .team {
+    width: 20%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    height: 300px;
+  }
+
+.sponsorimages, .sponsors{
+  display: flex;
+  justify-content: center;
+} 
+.sponsors {
+  padding: 1rem;
+}
+
+
+#demo{
+  text-align: center;
+  font-size: 40px;
+}

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carbon Footprint Competition</title>
+  <link href="style.css" rel="stylesheet">
+  <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="shortcut icon" href="images/TinoEcoIconTransparentBackground.png" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne&display=swap" rel="stylesheet">
+</head>
+<style>
+  .linknav {
+    line-height: 100px;
+  }
+</style>
+
+<body>
+  <nav>
+    <ul id="nav">
+      <a href="index.html"> <img id="logo" src="images/TinoEcoIcon.png"></a>
+      <a href="about.html" class="linknav"> About </a>
+      <a href="tasks.html" class="linknav"> Tasks </a>
+      <a href="leaderboard.html" class="linknav"> Leaderboard </a>
+      <a href="submit.html" class="linknav"> Submit </a>
+      <a href="prizes.html" class="linknav"> Prizes </a>
+      <a href="account.html" class="linknav"> <img src="images/account.png" class="profileimg"></a>
+
+    </ul>
+  </nav>
+<style>
+  .alert {
+  padding: 20px;
+  background-color: #DEECF1;
+  color: black;
+  text-align: center;
+}
+
+.closebtn {
+  margin-left: 15px;
+  color: black;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.closebtn:hover {
+  color: black;
+}
+</style>
+<div class="alert">
+  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+  <strong>The competition has been pushed back to May 12th</strong> 
+</div>
+  
+<p id="demo"></p>
+  <script>
+// Set the date we're counting down to
+var countDownDate = new Date("May 12, 2023 23:59:00").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  // Display the result in the element with id="demo"
+  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+
+  // If the count down is finished, write some text
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "EXPIRED";
+  }
+}, 1000);
+</script>
+
+</body>
+</html>
+
+  <div class="main-center">
+    <div class="text">
+      <h1 style="font-size: 80px; padding: 20px;  padding-top: 6%;color: white;">Carbon Footprint Competition</h1>
+      <h2 style="color: white;">Brought to you by Tino Eco & Acterra. Sponsored by SVCE</h2>
+      <button class="sign-up" onclick="document.location.href='account.html'">Sign Up</button>
+    </div>
+    <img src="images/FEET.png" class="backgroundimg" style = "width: 100%">
+  </div>
+  <div class="intro">
+    <!--
+      image on the left will be pplimage.jpg but idk where to put it
+      -->
+    <img src="images/Screenshot 2023-03-24 10.21.20 AM.png" style="width: 25.37%; height: 25.37%; position: relative; float:left;">
+    <div class="text">
+      <h1 style="padding-bottom: 30px; font-size: 40px;">What is the Carbon Footprint Competition? </h2>
+        <h3 style="font-size:15px;">The Carbon Footprint Competition is held by Tino Eco aimed to spread awareness on climate change and instill habits to reduce greenhouse gas emissions. It is targeted towards teens near Cupertino; however, people of all ages in the U.S. are open to join (you will only be receiving gift cards if you are not able to physically receive the prizes). We have a variety of tasks that participants can complete
+to earn points for prizes.</h3>
+        <a href="about.html"><button class="sign-up" style="width: 40%; margin-top: 50px; text-decoration: none;">About</button></a>
+    </div>
+  </div>
+  </div>
+  <div class="wholepart" style="padding: 30px;">
+    <div class="teaming" style="margin: auto; text-align: center; padding: 20px;">
+      <div class="info" style="text-align: center; display: flex; justify-content: center; ">
+        <h1 style="padding-left: 20px; padding-right: 1rem;">Behind the Scenes</h1>
+        <button class="learn" style="width: 10%; height: 40px; border: 0px; "><a href="about.html">Learn More
+          </a></button>
+      </div>
+    </div>
+    <div class="teams">
+      <div class="team">
+        <h1>Research Team</h1>
+        <img src="images/undraw_Researching_re_fuod.png" style="width: 50%; height: 120px;">
+       <!-- <p style="width: 80%;">The research team works on the basic skeleton of the competition. We work on things like
+          making up tasks,
+          writing descriptions, and choosing prizes of the competition. The team consists of 3 members: Erika Li,
+          Clarabelle Wang, Alice Ou and as well as an honorary member: Ishan Murthy. </p>
+        -->
+      </div>
+      <div class="team">
+        <h1>Website Team</h1>
+        <img src="images/undraw_building_websites_i78t.png" style="width: 50%;  height: 120px;">
+        <!--<p style="width: 80%;">The website team works on the website for the competition. This includes the front end,
+          back end, design, and
+          more. The team consists of three members: Yuleen Lee, Telin Lee and Melinda Kuo.</p> -->
+      </div>
+      <div class="team">
+        <h1>Outreach Team</h1>
+        <img src="images/undraw_Social_media_re_sulg.png" style="width: 50%;  height: 120px;">
+        <!--<p style="width: 80%;">The outreach team works to spread word about our competition and ensure those who want to
+          join know when and
+          how to access the necessary information. We are in charge of communications and advertising. In our team are
+          Aahelie Bhattacharya, Serene Kim, Katelyn Lai, and Zehra Naqvi.</p> -->
+      </div>
+    </div>
+  </div>
+  </div>
+  <div class="sponsors" style="display: flex; flex-direction: row; width: 100%; margin: auto; justify-content: center;">
+    <div class="firstsponsor" style="display: flex; flex-direction: column;">
+      <h2 style="text-align: center;">Sponsor</h2>
+    </div>
+    <div class="secondsponsor">
+      <h2 style="text-align: center;">Fiscal Sponsor</h2>
+    </div>
+    </div>
+  <div class="sponsorimages">
+    <img src="images/stuff.png" style="width: 50%; height: auto;"> 
+  </div>
+</body>
+
+</html>

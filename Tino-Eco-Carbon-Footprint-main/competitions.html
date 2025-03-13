@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carbon Footprint Competition</title>
+  <link href="css/tasks.css" rel="stylesheet">
+  <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="shortcut icon" href="images/TinoEcoIconTransparentBackground.png" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne&display=swap" rel="stylesheet">
+</head>
+<style>
+  .left{
+    width: 25%;
+  }
+</style>
+<body>
+  <script src="scripts/script.js"></script>
+  <nav>
+    <ul id="nav">
+      <a href="index.html"> <img id="logo" src="images/TinoEcoIcon.png"></a>
+      <a href="about.html" class="linknav"> About </a>
+      <a href="tasks.html" class="linknav"> Tasks </a>
+      <a href="leaderboard.html" class="linknav"> Leaderboard </a>
+      <a href="submit.html" class="linknav"> Submit </a>
+      <a href="prizes.html" class="linknav"> Prizes </a>
+      <a href="account.html" class="linknav"> <img src="images/account.png" class="profileimg"></a>
+
+    </ul>
+  </nav>
+  <div class="taskinfos">
+    <h1>All Tasks</h1>
+
+    <h4 style="color: #23359d">If many applications are received, we will be able to bring more graded categories such
+      as age groups.<br>If there are very less applications and the winning prize goes to a piece with no
+      effort, we
+      have the right to retract the prize.</h4>
+  </div>
+  <ul id="tabs">
+<a href="competitions.html"><button class="btabs" style = "color: #765E99; "> Competitions </button></a>
+    <a href="transportation.html"><button class="btabs"> Transportation </button></a>
+    <a href="renewableenergy.html"> <button class="btabs">Renewable Energy </button></a>
+    <a href="food.html"><button class="btabs"> Food </button></a>
+    <a href="miscellaneous.html"><button class="btabs"> Miscellaneous </button></a>
+  </ul>
+
+ <div class="search-results" id="search-results">
+    <div class="result-items">
+      <div class="left">
+        <h3>1. Art competition</h3>
+        <p>One time only, Hands-on, Competition</p>
+      </div>
+      <div class="right">
+        <p>create something that addresses carbon footprint (50pts)</p>
+        <div class="taskinfo" id="taskinfo" style="display: none">
+          <p id=description> a. Deliverables: Art piece & explanation (100 words max)</p>
+          </p>b. Grading Categories: visual & explanation </p>
+          <p class="indent"> i. 2D </p>
+          <p class="indent"> ii. 3D </p>
+          <p> c. Prizes:</p>
+          <p class="indent"> i. 1st place: $150</p>
+          <p class="indent"> ii. 2nd place: $75 </p>
+          <p class="indent"> iii. 3rd place: $50 </p>
+          <p class="indent">iv. Participation: 50 pts  </p>
+          <button class="button" style="float: right;"><a href="submit.html">Start</a>             </button>
+        </div>
+        <button class="button" role="button" onclick="displayDetails()">Details</button>
+      </div>
+    </div>
+    
+    <div class="result-items">
+      <div class="left">
+        <h3>2. Poetry competition</h3>
+        <p>One time only, Hands-on, Competition</p>
+      </div>
+      <div class="right">
+        <p>write a poetry on anything related to carbon footprint (50pts)</p>
+        <div class="taskinfo2" id="taskinfo2" style="display: none">
+          <p id="description2">a. Deliverables: poetry & explanation/literary analysis             (100-200 words) </p>
+          <p>b. Record yourself reading the poem and email it to <a href="tinoeco.chs@gmail.com"> tinoeco.chs@gmail.com </a></p>
+          <p> c. Prizes: </p>
+          <p class="indent"> i. 1st place: $150</p>
+          <p class="indent"> ii. 2nd place: $75 </p>
+          <p class="indent"> iii. 3rd place: $50 </p>
+          <p class="indent">iv. Participation: 50 pts  </p>
+          <button class="button" style="float: right;"><a href="submit.html">Start</a>             </button>
+        </div>
+        <button class="button" role="button" onclick="displayDetails2()">Details</button>
+      </div>
+    </div>
+    <div class="result-items">
+      <div class="left">
+        <h3>51. Competition</h3>
+        <p>Two times only</p>
+      </div>
+      <div class="right">
+        <p>Naming Competition (2 times only)</p>
+        <div class="taskinfo51" id="taskinfo51" style="display: none">
+          <p id="description51"> a. Tino Eco is thinking of changing our name due to its resemblance to a high school as opposed to an outside organization. Help Tino Eco gain ideas!</p>
+          <p>b. 10 pts for participation, 50pts for the winner</p>
+          <p>c. Fill out this form: <a href="https://forms.gle/VSzSRyom1PiJRtUf8"> https://forms.gle/VSzSRyom1PiJRtUf8</a> and screenshot your response before submitting it. Put your screenshot in a document and submit it as the task.</p>
+        </div>
+        <button class="button" role="button" onclick="displayDetails51()">Details</button>
+      </div>
+    </div>
+
+    <div class="result-items">
+      <div class="left">
+        <h3>52. Competition</h3>
+        <p>One time only</p>
+      </div>
+      <div class="right">
+        <p>Merch Design Competition </p>
+        <div class="taskinfo52" id="taskinfo52" style="display: none">
+          <p id="description52"> a. Design a hoodie for Tino Eco!</p>
+          <p>b. Go to <a href="https://www.customink.com/products/sweatshirts/hoodies/hanes-ecosmart-50-50-pullover-hoodie/119900"> https://www.customink.com/products/sweatshirts/hoodies/hanes-ecosmart-50-50-pullover-hoodie/119900</a> and start designing, once done save it and put the link in a doc, submit the doc for the task</p>
+          <p>c. Excluding the hoodie color, 2 colors max for design</p>
+          <p>d. Leave placeholder text in design to incorporate new name</p>
+          <p>e. 75 pts for participating, 100 pts + free merch for winning</p>
+          <p> <a href="https://drive.google.com/file/d/11ZUCv2xgy8OBjlGzP5Eymk3MPNrL8nck/view"> Link to Logo </a></p>
+        </div>
+        <button class="button" role="button" onclick="displayDetails52()">Details</button>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
