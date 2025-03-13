@@ -68,7 +68,7 @@ p{
   touch-action: manipulation;
   background-color: lightblue;
 }
-/* 
+
 .button:after {
   content: "";
   background-color: lightblue;
@@ -84,7 +84,7 @@ p{
 .button:hover:after {
   top: 0px;
   left: 0px;
-} */
+} 
 
 
 #divider {
