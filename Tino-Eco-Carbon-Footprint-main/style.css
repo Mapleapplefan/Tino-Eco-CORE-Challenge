@@ -177,7 +177,7 @@ p{
 }
 
 .backgroundimg{
- /* background-size: cover; */
+ background-size: cover; 
   background-repeat: no-repeat;
   height: 60vh;
   width: 80%;
@@ -187,7 +187,7 @@ p{
 
 .main-center{
     position: relative;
-/*     display: inline-block; /* Make the width of box same as image */ */
+   display: inline-block;
 }
 .main-center .text{
     position: absolute;
@@ -214,7 +214,7 @@ p{
 .intro .text{
   width: 70%;
   background-color: #fff;
-/*   padding: 100px; */
+  padding: 100px;
   padding-left: 130px;
   padding-right: 130px;
   padding-top: 90px;
