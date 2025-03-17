@@ -67,7 +67,7 @@ p{
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
-  background-color: lightblue;
+  background-color: #add8e6;
 }
 /* 
 .button:after {
