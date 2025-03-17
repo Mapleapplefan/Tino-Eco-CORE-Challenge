@@ -163,7 +163,7 @@ p{
 }
 
 .sign-up{
-  background-color: #3a3399;
+  background-color: #033500;
   border: none;
   color: white;
   padding: 15px 32px;
@@ -187,7 +187,7 @@ p{
 
 .main-center{
     position: relative;
-   display: inline-block;
+    display: inline-block;
 }
 .main-center .text{
     position: absolute;
@@ -196,22 +196,37 @@ p{
     left: 0;
     right: 0;
     text-align: center;
-
 }
 
 /* Bottom Part */
 
 .intro{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: nowrap; /* Prevents stacking */
   width: 100%;
-
-  height: 45%;
-  padding: 150px;
+  padding: 5%;
   background-color: #E8E6E6;
-
   
 }
 
+.intro img{
+  width: 50%; 
+  max-width: 500px;
+  height: auto; 
+  position: relative; 
+  margin-right: 20px;
+}
+
 .intro .text{
+  flex: 1; /* Takes remaining space */
+  max-width: 800px; /* Prevents overly wide text */
+  background-color: #fff;
+  padding: 40px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  /* flex: 1;
   width: 70%;
   background-color: #fff;
   padding: 100px;
@@ -219,12 +234,36 @@ p{
   padding-right: 130px;
   padding-top: 90px;
   padding-bottom: 90px;
-  margin-left: 30%;
-
+  margin-left: 30%; */
 }
 
-.intro .text h1{
-  width: 80%
+.intro .text h1 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.intro .text h3 {
+  font-size: 1rem;
+}
+
+
+@media (max-width: 768px) {
+  .intro {
+    flex-direction: row; /* Ensures it stays in a row */
+    align-items: flex-start; /* Aligns items properly */
+  }
+
+  .intro img {
+    width: 30%;
+    max-width: 180px;
+    min-width: 120px;
+    margin-right: 15px;
+  }
+
+  .intro .text {
+    width: 100%;
+    padding: 20px;
+  }
 }
 
 /* very bottom part */
