@@ -168,8 +168,8 @@ p{
 
 .main-center{
     position: relative;
-/*     display: inline-block; /* Make the width of box same as image */ */
 }
+
 .main-center .text{
     position: absolute;
     z-index: 999;

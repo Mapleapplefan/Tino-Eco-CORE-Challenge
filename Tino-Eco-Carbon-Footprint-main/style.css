@@ -62,7 +62,6 @@ p{
   border: 0px solid black;
   cursor: pointer;
   position: relative;
-/*   background-color: rgba(0, 0, 0, 0); */
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
@@ -80,6 +79,10 @@ p{
   left: 7px;
   transition: 0.2s;
 }
+/* 
+.button:hover{
+  transform: scale(1.05);
+} why no work bro */
 
 .button:hover:after {
   top: 0px;
@@ -204,7 +207,7 @@ p{
   display: flex;
   align-items: center;
   justify-content: space-between;
-  flex-wrap: nowrap; /* Prevents stacking */
+  flex-wrap: nowrap;
   width: 100%;
   padding: 5%;
   background-color: #E8E6E6;
@@ -220,21 +223,12 @@ p{
 }
 
 .intro .text{
-  flex: 1; /* Takes remaining space */
-  max-width: 800px; /* Prevents overly wide text */
+  flex: 1; 
+  max-width: 800px; 
   background-color: #fff;
   padding: 40px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
-  /* flex: 1;
-  width: 70%;
-  background-color: #fff;
-  padding: 100px;
-  padding-left: 130px;
-  padding-right: 130px;
-  padding-top: 90px;
-  padding-bottom: 90px;
-  margin-left: 30%; */
 }
 
 .intro .text h1 {
@@ -249,8 +243,8 @@ p{
 
 @media (max-width: 768px) {
   .intro {
-    flex-direction: row; /* Ensures it stays in a row */
-    align-items: flex-start; /* Aligns items properly */
+    flex-direction: row; 
+    align-items: flex-start; 
   }
 
   .intro img {
@@ -268,7 +262,16 @@ p{
 
 /* very bottom part */
 
+.teams {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
 .team{
+  flex: 1 1 300px;
   margin: auto;
   width: 100%;
   display: flex;
@@ -296,8 +299,17 @@ p{
 
 .part{
   display: flex;
+  flex:1;
+  min-width: 250px;
+  max-width: 33%;
   flex-direction: column;
   width: 33%
+}
+
+.team img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
 }
 
 
@@ -308,24 +320,6 @@ p{
 }
 
 /* TASKS PAGE  */
-
-
-
-/* PRIZES @page */
-
-
-.teams {
-    display: flex;
-    flex-direction: row;
-    width: 100;
-    padding-bottom: 50px;
-  }
-
-  .team {
-    width: 20%;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    height: 300px;
-  }
 
 .sponsorimages, .sponsors{
   display: flex;
