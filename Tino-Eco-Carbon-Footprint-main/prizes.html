@@ -1,233 +1,274 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>CORE Challenge</title>
-  <link href="css/prizes.css" rel="stylesheet">
-  <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="css/prizes.css" rel="stylesheet" />
+  <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="shortcut icon" href="images/TinoEcoIconTransparentBackground.png" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Syne&display=swap" rel="stylesheet">
-</head>
-<style>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Syne', sans-serif;
+      background: #fff;
+      color: #333;
+      text-align: center;
+    }
+    nav ul#nav {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 1rem;
+      flex-wrap: wrap;
+    }
+    nav ul#nav a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #000;
+    }
+    #logo {
+      width: 100px;
+      height: auto;
+      object-fit: contain;
+    }
     .card {
-    width: 30%;
-    display: flex;
-    flex-direction: column;
-    background-color: #F6F6F6;
-    border-radius: 10px;
-    height: 250px;
-  }
-
-  .header {
-    height: 30%;
-    background: gray;
-    color: white;
-    text-align: center;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-  }
-
-  .container {
-    padding: 2px 16px;
-  }
-
-  .section1 {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-content: center;
-    flex-wrap: wrap;
-  
-  }
- 
-  .cards {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    transition: 0.3s;
-    width: 25%;
-  }
-
-   /* On mouse-over, add a deeper shadow  */
-  .cards:hover {
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-  }
-
-   /* Add some padding inside the card container  */
-  .containers {
-    padding: 2px 16px;
-  }
-
-  .cards {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    transition: 0.3s;
-    border-radius: 5px;
-  }
-
-  /* Add rounded corners to the top left and the top right corner of the image  */
-  img {
-    border-radius: 5px 5px 0 0;
-  }
-
-  .diffsec{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    padding: 50px;
-    width: 80%;
-    margin: auto;
-    flex: auto;
-    align-items: stretch;
-  }
-  */
-
-  .cards{
-    padding: 10px;
-  }
-  
-  *{
-    text-align: center;
-  }
-  h3 {
-    text-align: center;
-    padding: 1rem;
-    padding-bottom: 2rem;
-    margin-top: 1rem;
-  }
-  .images{
-    width: 100px;
-    height: 150px;
-    display: flex;
-    flex-direction: row;
-    padding: 1rem;
-    margin: auto;
-    justify-content: center;
-  }
-</style>
-
+      width: 30%;
+      display: flex;
+      flex-direction: column;
+      background-color: #F6F6F6;
+      border-radius: 10px;
+      height: 250px;
+      margin: 20px auto;
+    }
+    .header {
+      height: 30%;
+      background: gray;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+    }
+    .container {
+      padding: 2px 16px;
+    }
+    .section1 {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    img {
+      border-radius: 5px 5px 0 0;
+    }
+    .diffsec {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      padding: 50px;
+      width: 80%;
+      margin: auto;
+      align-items: stretch;
+      justify-content: center;
+    }
+    .cards {
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      transition: 0.3s;
+      flex: 1 1 250px;
+      margin: 10px;
+      border-radius: 5px;
+      padding: 10px;
+    }
+    .cards:hover {
+      box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    }
+    .containers {
+      padding: 2px 16px;
+    }
+    .points-row {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 2rem;
+      flex-wrap: wrap;
+      margin: 2rem auto;
+      width: 80%;
+    }
+    .point-item {
+      flex: 1 1 200px;
+      text-align: center;
+      padding: 1rem;
+      border-radius: 5px;
+    }
+    .prize-img {
+      display: block;
+      margin: 1rem auto 0;
+      max-width: 250px;
+      height: auto;
+      border-radius: 5px;
+    }
+    .lightblue-section {
+      margin: 20px auto;
+      text-align: center;
+      width: 90%;
+      padding: 20px;
+      background-color: #DEECF1;
+    }
+    h3 {
+      padding: 1rem;
+      padding-bottom: 2rem;
+      margin-top: 1rem;
+    }
+    @media (max-width: 768px) {
+      .card {
+        width: 90%;
+        height: auto;
+        margin: 10px auto;
+      }
+      .section1 {
+        flex-direction: column;
+      }
+      .cards {
+        flex: 1 1 45%;
+      }
+      .diffsec {
+        width: 90%;
+        padding: 20px;
+      }
+      nav ul#nav {
+        flex-direction: column;
+      }
+      .points-row {
+        width: 90%;
+      }
+    }
+    @media (max-width: 480px) {
+      .cards {
+        flex: 1 1 90%;
+      }
+      .prize-img {
+        max-width: 200px;
+      }
+    }
+  </style>
+</head>
 <body>
   <nav>
     <ul id="nav">
-      <a href="index.html"> <img id="logo" src="images/TinoEcoLogo.png"></a>
-      <a href="about.html" class="linknav"> About </a>
-      <a href="tasks.html" class="linknav"> Tasks </a>
-      <a href="events.html" class="linknav"> Events </a>
-      <a href="leaderboard.html" class="linknav"> Leaderboard </a>
-      <a href="submit.html" class="linknav"> Submit </a>
-      <a href="prizes.html" class="linknav"> Prizes </a>
-      <a href="account.html" class="linknav"> <img src="images/account.png" class="profileimg"></a>
+      <a href="index.html"><img id="logo" src="images/TinoEcoLogo.png" alt="Logo" /></a>
+      <a href="about.html" class="linknav">About</a>
+      <a href="tasks.html" class="linknav">Tasks</a>
+      <a href="events.html" class="linknav">Events</a>
+      <a href="leaderboard.html" class="linknav">Leaderboard</a>
+      <a href="submit.html" class="linknav">Submit</a>
+      <a href="prizes.html" class="linknav">Prizes</a>
+      <a href="account.html" class="linknav"><img src="images/account.png" class="profileimg" alt="Account" /></a>
     </ul>
   </nav>
-  <!-- <div class="stuff"> -->
-  <h2 style="color: #23359d">Prizes (more awards, better prizes) may change due to participation and quality of
-    work.<br> Prizes that are a mystery will be revealed when someone reaches the checkpoint.</h2>
+  <h2 style="color: #23359d">
+    Prizes (more awards, better prizes) may change due to participation and quality of work.<br />
+    Prizes that are a mystery will be revealed when someone reaches the checkpoint.
+  </h2>
   <div class="section1">
-    <div class="card" style = "margin-right:80px;">
+    <div class="card" style="margin-right:80px;">
       <div class="header">
-        <h2>Small Comp Winners: $825 </h2>
+        <h2>Small Comp Winners: $825</h2>
       </div>
       <div class="container">
-        <h2 style = "font-size: 20px;">2D Art/3D Art</h2>
-        <!-- this part below indented until poetry -->
+        <h2 style="font-size: 20px;">2D Art/3D Art</h2>
         <p>1st: $150, 2nd: $75, 3rd: $50</p>
-        <h2 style = "font-size: 20px;">Poetry</h2>
-        <!--indent -->
+        <h2 style="font-size: 20px;">Poetry</h2>
         <p>1st: $150, 2nd: $75, 3rd: $50</p>
       </div>
     </div>
-    <div class="card" style = "margin-left:80px;">
+    <div class="card" style="margin-left:80px;">
       <div class="header">
         <h2>CFC Winners: $550</h2>
       </div>
-      <div class="container" style= "padding-top: 20px">
+      <div class="container" style="padding-top: 20px">
         <p>1st: $200</p>
         <p>2nd: $150</p>
         <p>3rd: $100</p>
         <p>4th-5th: $50</p>
       </div>
     </div>
-
   </div>
-  <h3 style="background-color: #DEECF1">Signup: sticker + eraser (while stock lasts)</h3>
+  <div style="background-color: #DEECF1; padding: 1rem;">
+    <h3>Signup: sticker + eraser (while stock lasts)</h3>
+    <img src="images/signup.webp" alt="Sticker + Eraser" style="max-width: 200px; height: auto; display: block; margin: 0 auto 1rem;" />
+  </div>
   <h3>50pt: $5 giftcard</h3>
-  <div class="100ptsection" style="background-color: #DEECF1">
+  <img src="images/5giftcard.webp" alt="$5 Gift Card" style="max-width: 200px; height: auto; display: block; margin: 0 auto 1rem;" />
+  <div class="100ptsection" style="background-color: #DEECF1; padding: 1rem;">
     <h3>100pt: Environment Pack (boba straw + straw cleaner + bag: color/produce)</h3>
-    <!--<div class="images"  style = "margin: auto">
-      <img src="images/paper.png">
-      <img src="images/coloringbags.png">
-      <img src="images/producebags.png">
-    </div> -->
   </div>
-
-    <div class="section"> 
-      <div class="diffsec">
-        </a>
-        <div class="cards">
-            <img src="images/plasticstraws.png" alt="img" style="width:100%">
-            <div class="containers">
-              <h4><b>Straw</b></h4>
-              <p>Reusable Plastic Straws</p>
-            </div>
+  <div class="section">
+    <div class="diffsec">
+      <div class="cards">
+        <img src="images/plasticstraws.png" alt="Plastic Straws" />
+        <div class="containers">
+          <p>Reusable Plastic Straws</p>
         </div>
-        </a>
-        <div class="cards">
-            <img src="images/strawsstuff.png" alt="img" style="width:100%">
-            <div class="containers">
-              <h4><b>metal stainless/12</b></h4>
-              <p>Boba Straw/Straw Cleaner/Bags</p>
-            </div>
+      </div>
+      <div class="cards">
+        <img src="images/strawsstuff.png" alt="Boba Straw" />
+        <div class="containers">
+          <p>Boba Straw/Straw Cleaner/Bags</p>
         </div>
-        
-        <div class="cards">
-            <img src="images/coloringbags.png" alt="img" style="width:100%">
-            <div class="containers">
-              <h4><b>Coloring bags 24  </b></h4>
-              <p>Coloring bags 24</p>
-            </div>
+      </div>
+      <div class="cards">
+        <img src="images/coloringbags.png" alt="Coloring Bags" />
+        <div class="containers">
+          <p>Coloring bags 24</p>
         </div>
-
-        <div class="cards">
-            <img src="images/producebags.png" alt="img" style="width:100%">
-            <div class="containers">
-              <h4><b>(produce bags) </b></h4>
-              <p>Produce Bags</p>
-            </div>
+      </div>
+      <div class="cards">
+        <img src="images/producebags.png" alt="Produce Bags" />
+        <div class="containers">
+          <p>Produce Bags</p>
         </div>
-
-  <h3>300pt: $10 giftcard</h3>
-  <div class="500ptsection" style="background-color: #DEECF1">
-    <h3 >500pt: Shampoo Bar</h3>
-    <div class="images">
-      <img src="images/SOAP.png">
+      </div>
     </div>
   </div>
-  <h3>750pt: Plantable Pencils</h3>
-  <div class="images">
-    <img src="images/pencils.png">
+  <div class="points-row">
+    <div class="point-item">
+      <h3>300pt: $10 giftcard</h3>
+      <img src="images/10giftcard.webp" alt="$10 Gift Card" class="prize-img" />
+    </div>
+    <div class="point-item" style="background-color: #DEECF1;">
+      <h3>500pt: Shampoo Bar</h3>
+      <img src="images/SOAP.png" alt="Shampoo Bar" class="prize-img" />
+    </div>
+    <div class="point-item">
+      <h3>750pt: Plantable Pencils</h3>
+      <img src="images/pencils.png" alt="Plantable Pencils" class="prize-img" />
+    </div>
   </div>
-        <div class="cards">
-            <img src="images/pencils.png" alt="img" style="width:100%">
-            <div class="containers">
-              <h4><b></b></h4>
-              <p>Pencils</p>
-            </div>
-        </div>
-  <div class="1000ptsection" style="background-color: #DEECF1">
+  <div class="lightblue-section">
     <h3>1000pt: Paper Set</h3>
-    <div class="images">
-      <img src="images/yeet.png">
-      <img src="images/yeetus.png">
-  </div>
-  <h3>1250pt: $50 giftcard</h3>
-  <h3 style="background-color: #DEECF1">1500pt: a gift of your choosing under $500 (only the first person to reach this pt goal) ex: PS5 (open to anyone in the world)</h3>
-   <img src="images/undraw_Gaming_re_cma2.png" style="width: 50%; height: 30%;"> 
-  </div>
+    <div class="images" style="border-radius: 0;">
+      <img src="images/yeet.png" alt="Paper Set 1" />
+      <img src="images/yeetus.png" alt="Paper Set 2" />
+    </div>
+    <h3>1250pt: $50 giftcard</h3>
+    <img src="images/50giftcard.webp" alt="$50 Gift Card" style="max-width: 200px; height: auto; display: block; margin: 0 auto 1rem;" />
+    <h3>
+      1500pt: a gift of your choosing under $500 (only the first person to reach this pt goal)
+      ex: PS5 (open to anyone in the world)
+    </h3>
+    <img src="images/undraw_Gaming_re_cma2.png" style="width: 50%; height: auto;" alt="Gaming" />
   </div>
 </body>
-
 </html>
-
-<!-- link to rewards: https://docs.google.com/document/d/154vU7pd77cUbTm0n2WzyoF139rjS8JSdpkWsYE6n6z4/edit -->
