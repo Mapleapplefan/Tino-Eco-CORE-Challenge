@@ -1,14 +1,19 @@
+// filepath: /Users/gautam/Tino-Eco-CORE-Challenge/.vscode/launch.json
 {
-    // Use IntelliSense to learn about possible attributes.
-    // Hover to view descriptions of existing attributes.
-    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
+        {
+            "name": "Python: Flask",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/Tino-Eco-Carbon-Footprint-main/backend/app.py",
+            "console": "integratedTerminal"
+        },
         {
             "type": "chrome",
             "request": "launch",
             "name": "Launch Chrome against localhost",
-            "url": "http://localhost:8080",
+            "url": "http://localhost:5000",
             "webRoot": "${workspaceFolder}"
         }
     ]

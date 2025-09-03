@@ -5,13 +5,36 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>CORE Challenge</title>
+  <link href="style.css" rel="stylesheet" />
   <link href="css/prizes.css" rel="stylesheet" />
   <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="shortcut icon" href="images/TinoEcoIconTransparentBackground.png" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Syne&display=swap" rel="stylesheet" />
-  <style>
+</head>
+<style>
+  .linknav {
+    line-height: 100px;
+  }
+</style>
+
+<body>
+  <nav>
+    <ul id="nav">
+      <a href="index.html"> <img id="logo" src="images/TinoEcoLogo.png"></a>
+      <a href="about.html" class="linknav"> About </a>
+      <a href="tasks.html" class="linknav"> Tasks </a>
+      <a href="blog.html" class="linknav"> Blog </a>
+      <a href="leaderboard.html" class="linknav"> Leaderboard </a>
+      <a href="submit.html" class="linknav"> Submit </a>
+      <a href="prizes.html" class="linknav" style="color: #0e7c7b; font-weight: bold;"> Prizes </a>
+      <a href="map.html" class="linknav"> Map </a>
+      <a href="account.html" class="linknav"> <img src="images/account.png" class="profileimg"></a>
+    </ul>
+  </nav>
+
+<style>
     * {
       margin: 0;
       padding: 0;
@@ -22,24 +45,6 @@
       background: #fff;
       color: #333;
       text-align: center;
-    }
-    nav ul#nav {
-      list-style: none;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 1rem;
-      flex-wrap: wrap;
-    }
-    nav ul#nav a {
-      margin: 0 10px;
-      text-decoration: none;
-      color: #000;
-    }
-    #logo {
-      width: 100px;
-      height: auto;
-      object-fit: contain;
     }
     .card {
       width: 30%;
@@ -163,20 +168,7 @@
       }
     }
   </style>
-</head>
-<body>
-  <nav>
-    <ul id="nav">
-      <a href="index.html"><img id="logo" src="images/TinoEcoLogo.png" alt="Logo" /></a>
-      <a href="about.html" class="linknav">About</a>
-      <a href="tasks.html" class="linknav">Tasks</a>
-      <a href="events.html" class="linknav">Events</a>
-      <a href="leaderboard.html" class="linknav">Leaderboard</a>
-      <a href="submit.html" class="linknav">Submit</a>
-      <a href="prizes.html" class="linknav">Prizes</a>
-      <a href="account.html" class="linknav"><img src="images/account.png" class="profileimg" alt="Account" /></a>
-    </ul>
-  </nav>
+
   <h2 style="color: #23359d">
     Prizes (more awards, better prizes) may change due to participation and quality of work.<br />
     Prizes that are a mystery will be revealed when someone reaches the checkpoint.

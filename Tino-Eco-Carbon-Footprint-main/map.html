@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CORE Challenge Map</title>
+  <link href="style.css" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" rel="stylesheet" />
+  <style>
+    #map { height: calc(100vh - 140px); width: 90%; margin: 20px auto; border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.08); }
+  </style>
+</head>
+<body>
+  <nav>
+    <ul id="nav">
+      <a href="index.html"><img id="logo" src="images/TinoEcoLogo.png" /></a>
+      <a href="about.html" class="linknav">About</a>
+      <a href="tasks.html" class="linknav">Tasks</a>
+      <a href="leaderboard.html" class="linknav">Leaderboard</a>
+      <a href="submit.html" class="linknav">Submit</a>
+      <a href="prizes.html" class="linknav">Prizes</a>
+      <a href="map.html" class="linknav">Map</a>
+      <a href="account.html" class="linknav"><img src="images/account.png" class="profileimg"/></a>
+    </ul>
+  </nav>
+
+  <div class="hero" style="background-image:url('images/placeholderMain.jpg');">
+    <div class="hero-content">
+                <h2>Community Engagement Events Map</h2>
+          <p style="color: white; margin-top: 10px; font-size: 16px;">Find Community Engagement events (Tasks 19-32) and volunteer opportunities near you</p>
+    </div>
+  </div>
+
+  <div id="map"></div>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="scripts/map.js"></script>
+</body>
+</html>
+
+

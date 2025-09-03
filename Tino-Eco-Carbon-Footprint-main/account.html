@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CORE Challenge</title>
+  <link href="style.css" rel="stylesheet">
   <link href="css/account.css" rel="stylesheet">
   <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,6 +15,12 @@
   <link href="https://fonts.googleapis.com/css2?family=Syne&display=swap" rel="stylesheet">
 </head>
 
+<style>
+  .linknav {
+    line-height: 100px;
+  }
+</style>
+
 <body>
   <script src="scripts/api.js"></script>
   <nav>
@@ -21,55 +28,49 @@
       <a href="index.html"> <img id="logo" src="images/TinoEcoLogo.png"></a>
       <a href="about.html" class="linknav"> About </a>
       <a href="tasks.html" class="linknav"> Tasks </a>
-      <a href="events.html" class="linknav"> Events </a>
+      <a href="blog.html" class="linknav"> Blog </a>
       <a href="leaderboard.html" class="linknav"> Leaderboard </a>
       <a href="submit.html" class="linknav"> Submit </a>
       <a href="prizes.html" class="linknav"> Prizes </a>
+      <a href="map.html" class="linknav"> Map </a>
       <a href="account.html" class="linknav"> <img src="images/account.png" class="profileimg"></a>
-
     </ul>
   </nav>
-  <!--Stylesheet-->
-  <style media="screen">
-    
-  </style>
-  </head>
 
-  <body>
-    <div class="totallogin" style="display: flex; flex-direction: row;">
-      <div class="login">
+  <div class="totallogin" style="display: flex; flex-direction: row;">
+    <div class="login">
 
-        <form
-          action="javascript:login(document.getElementById('loginemail').value,document.getElementById('loginpassword').value)"
-          class="form1">
-          <h3>Login </h3>
-          <label for="email">Email</label>
-          <input type="email" placeholder="Email" id="loginemail" required>
+      <form
+        action="javascript:login(document.getElementById('loginemail').value,document.getElementById('loginpassword').value)"
+        class="form1">
+        <h3>Login </h3>
+        <label for="email">Email</label>
+        <input type="email" placeholder="Email" id="loginemail" required>
 
-          <label for="password">Password</label>
-          <input type="password" placeholder="Password" id="loginpassword" required>
+        <label for="password">Password</label>
+        <input type="password" placeholder="Password" id="loginpassword" required>
 
-          <button>Log In</button>
-        </form>
-      </div>
-      <div class="signupthing">
-        <form
-          action="javascript:create_account(document.getElementById('signupname').value,document.getElementById('signupemail').value,document.getElementById('signuppassword').value)"
-          class="form2">
-          <h3>Sign up </h3>
-          <label for="signupname">Full Name</label>
-          <input type="text" placeholder="Name" id="signupname" required>
-
-          <label for="signupemail">Email</label>
-          <input type="email" placeholder="Email" id="signupemail" required>
-
-          <label for="signuppassword">Password</label>
-          <input type="password" placeholder="Password" id="signuppassword" required>
-
-          <button>Sign Up </button>
-        </form>
-      </div>
+        <button>Log In</button>
+      </form>
     </div>
-  </body>
+    <div class="signupthing">
+      <form
+        action="javascript:create_account(document.getElementById('signupname').value,document.getElementById('signupemail').value,document.getElementById('signuppassword').value)"
+        class="form2">
+        <h3>Sign up </h3>
+        <label for="signupname">Full Name</label>
+        <input type="text" placeholder="Name" id="signupname" required>
+
+        <label for="signupemail">Email</label>
+        <input type="email" placeholder="Email" id="signupemail" required>
+
+        <label for="signuppassword">Password</label>
+        <input type="password" placeholder="Password" id="signuppassword" required>
+
+        <button>Sign Up </button>
+      </form>
+    </div>
+  </div>
+</body>
 
 </html>

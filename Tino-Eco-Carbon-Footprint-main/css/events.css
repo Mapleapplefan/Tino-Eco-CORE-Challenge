@@ -1,14 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700&family=Poppins:wght@400;600;700&display=swap');
+
+:root {
+  --color-primary: #0e7c7b;
+  --color-secondary: #23359d;
+  --color-bg: #f7faf9;
+  --radius-lg: 16px;
+  --shadow-md: 0 10px 25px rgba(0,0,0,0.08);
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
-    font-family: 'Syne', sans-serif;
+    font-family: 'Poppins', 'Syne', system-ui, -apple-system, sans-serif;
   }
   
   h2 {
     padding: 1rem;
+    font-size: 1.6rem;
   }
+  h1 { font-size: 2.2rem; }
+  h3 { font-size: 1.25rem; }
+  p  { font-size: 1.05rem; }
+  body { background: var(--color-bg); color: #111827; font-size: 18px; line-height: 1.65; }
   
   #tabs {
     text-align: center;
@@ -124,8 +139,10 @@
   .linknav{
     padding: 20px;
     text-decoration: none;
-    color: #212121
+    color: #1f2937;
+    font-weight: 600
   }
+  .linknav:hover { color: var(--color-primary); }
   
   .profileimg{
     width:40px;
@@ -184,12 +201,10 @@
   
   .intro{
     width: 100%;
-  
     height: 50%;
     padding: 200px;
-    background-color: #E8E6E6;
-  
-    
+    background-color: #e8f7f4;
+    border-radius: var(--radius-lg);
   }
   
   .intro .text{
@@ -284,3 +299,23 @@
   .linknav{
       line-height: 100px;
     }
+
+  /* Hero shared */
+  .hero{
+    width: 100%;
+    min-height: 260px;
+    border-radius: 14px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--shadow-md);
+    margin: 12px auto 8px;
+  }
+  .hero .hero-content{
+    background: rgba(255,255,255,0.9);
+    padding: 16px 24px;
+    border-radius: 12px;
+    text-align: center;
+  }

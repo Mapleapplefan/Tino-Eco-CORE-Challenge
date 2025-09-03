@@ -1,4 +1,4 @@
-const apiURL = "http://tino-eco.com:8000/"
+const apiURL = "http://127.0.0.1:8000/"
 
 function create_account(name, email, password) {
     const xhr = new XMLHttpRequest();

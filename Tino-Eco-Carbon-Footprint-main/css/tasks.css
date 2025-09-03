@@ -1,14 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700&family=Poppins:wght@400;600;700&display=swap');
+
+:root {
+  --color-primary: #0e7c7b;
+  --color-secondary: #23359d;
+  --color-bg: #f7faf9;
+  --radius-lg: 16px;
+  --shadow-md: 0 10px 25px rgba(0,0,0,0.08);
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   text-decoration: none;
-  font-family: 'Syne', sans-serif;
+  font-family: 'Poppins', 'Syne', system-ui, -apple-system, sans-serif;
 }
 
 h2 {
   padding: 1rem;
+  font-size: 1.6rem;
 }
+h1 { font-size: 2.2rem; }
+h3 { font-size: 1.25rem; }
+p  { font-size: 1.05rem; }
+
+body { background: var(--color-bg); color: #111827; font-size: 18px; line-height: 1.65; }
+
 
 #tabs {
   text-align: center;
@@ -124,8 +141,10 @@ p{
 .linknav{
   padding: 20px;
   text-decoration: none;
-  color: #212121
+  color: #1f2937;
+  font-weight: 600;
 }
+.linknav:hover { color: var(--color-primary); }
 
 .profileimg{
   width:40px;
@@ -144,17 +163,19 @@ p{
 }
 
 .sign-up{
-  background-color: #3a3399;
+  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
   border: none;
   color: white;
-  padding: 15px 32px;
+  padding: 16px 28px;
   margin-top: 2%;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 16px;
-  width: 20%;
-  cursor: pointer
+  font-size: 18px;
+  min-width: 220px;
+  cursor: pointer;
+  border-radius: 12px;
+  box-shadow: var(--shadow-md);
 }
 
 .backgroundimg{
@@ -281,10 +302,16 @@ p{
 
 .button{
   text-decoration: none;
-  padding: 5px;
-  background-color: #CCF0FF;
+  padding: 12px 18px;
+  background-color: var(--color-primary);
+  color: #fff;
+  border-radius: 10px;
+  box-shadow: var(--shadow-md);
+  font-weight: 600;
   cursor: pointer;
+  border: 0;
 }
+.button:hover { filter: brightness(1.02); transform: translateY(-1px); }
 
 .search-results .result-items .left p{
   padding-top:10px;
@@ -308,3 +335,32 @@ a{
 .linknav{
     line-height: 100px;
   }
+
+/* Hero section shared across task pages */
+.hero{
+  width: 100%;
+  min-height: 260px;
+  border-radius: 14px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-md);
+  margin: 12px auto 8px;
+}
+.hero .hero-content{
+  background: rgba(255,255,255,0.9);
+  padding: 16px 24px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.content-illustration{
+  width: 100%;
+  max-width: 520px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: var(--shadow-md);
+  margin: 16px 0;
+}

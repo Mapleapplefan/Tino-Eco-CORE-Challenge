@@ -10,7 +10,7 @@ HEADERS = {
 app = Flask(__name__)
 
 def is_officer(email):
-    with sqlite3.connect('website.db', detect_types=sqlite3.PARSE_DECLTYPES | sqlite3.PARSE_COLNAMES) as conn:
+    with sqlite3.connect('../../website.db', detect_types=sqlite3.PARSE_DECLTYPES | sqlite3.PARSE_COLNAMES) as conn:
         cursor = conn.cursor()
         user = cursor.execute("""SELECT 1 FROM user_info WHERE is_officer = 1 AND email = ?""", [email])
         user = user.fetchone()
@@ -29,7 +29,7 @@ def user_points():
     except KeyError:
         abort(400)
         
-    with sqlite3.connect('website.db', detect_types=sqlite3.PARSE_DECLTYPES | sqlite3.PARSE_COLNAMES) as conn:
+    with sqlite3.connect('../../website.db', detect_types=sqlite3.PARSE_DECLTYPES | sqlite3.PARSE_COLNAMES) as conn:
         cursor = conn.cursor()
         points_row = cursor.execute("SELECT points FROM user_info WHERE email = ?", [email]).fetchone()
 
@@ -50,7 +50,7 @@ def is_valid_session():
     except TypeError:
         {"is_valid_session": False}, 200, HEADERS
 
-    with sqlite3.connect('website.db', detect_types=sqlite3.PARSE_DECLTYPES | sqlite3.PARSE_COLNAMES) as conn:
+    with sqlite3.connect('../../website.db', detect_types=sqlite3.PARSE_DECLTYPES | sqlite3.PARSE_COLNAMES) as conn:
         cursor = conn.cursor()
         session = cursor.execute("""
         SELECT expires
@@ -85,7 +85,7 @@ def create_account():
     except KeyError:
         abort(400)
 
-    with sqlite3.connect('website.db', detect_types=sqlite3.PARSE_DECLTYPES | sqlite3.PARSE_COLNAMES) as conn:
+    with sqlite3.connect('../../website.db', detect_types=sqlite3.PARSE_DECLTYPES | sqlite3.PARSE_COLNAMES) as conn:
         cursor = conn.cursor()
         user = cursor.execute("""
         SELECT 1
@@ -116,7 +116,7 @@ def login():
     except KeyError:
         abort(400)
 
-    with sqlite3.connect('website.db', detect_types=sqlite3.PARSE_DECLTYPES | sqlite3.PARSE_COLNAMES) as conn:
+    with sqlite3.connect('../../website.db', detect_types=sqlite3.PARSE_DECLTYPES | sqlite3.PARSE_COLNAMES) as conn:
         cursor = conn.cursor()
         user = cursor.execute("""
         SELECT 1
@@ -147,7 +147,7 @@ def submitted_tasks():
     except KeyError:
         abort(400)
 
-    with sqlite3.connect('website.db', detect_types=sqlite3.PARSE_DECLTYPES | sqlite3.PARSE_COLNAMES) as conn:
+    with sqlite3.connect('../../website.db', detect_types=sqlite3.PARSE_DECLTYPES | sqlite3.PARSE_COLNAMES) as conn:
         cursor = conn.cursor()
         if is_officer(email):
             stuff = cursor.execute("SELECT * FROM tasks WHERE accepted = 0").fetchall()
@@ -174,7 +174,7 @@ def accepted_tasks():
     except KeyError:
         abort(400)
 
-    with sqlite3.connect('website.db', detect_types=sqlite3.PARSE_DECLTYPES | sqlite3.PARSE_COLNAMES) as conn:
+    with sqlite3.connect('../../website.db', detect_types=sqlite3.PARSE_DECLTYPES | sqlite3.PARSE_COLNAMES) as conn:
         cursor = conn.cursor()
         if is_officer(email):
             stuff = cursor.execute("SELECT * FROM tasks WHERE accepted = 1").fetchall()
@@ -195,7 +195,7 @@ def accepted_tasks():
 @app.get("/leaderboard")
 def leaderboard():
     users = []
-    with sqlite3.connect('website.db', detect_types=sqlite3.PARSE_DECLTYPES | sqlite3.PARSE_COLNAMES) as conn:
+    with sqlite3.connect('../../website.db', detect_types=sqlite3.PARSE_DECLTYPES | sqlite3.PARSE_COLNAMES) as conn:
         cursor = conn.cursor()
         for row in cursor.execute("""
         SELECT name, points FROM user_info
@@ -220,7 +220,7 @@ def submit_task():
     except KeyError:
         abort(400)
 
-    with sqlite3.connect('website.db', detect_types=sqlite3.PARSE_DECLTYPES | sqlite3.PARSE_COLNAMES) as conn:
+    with sqlite3.connect('../../website.db', detect_types=sqlite3.PARSE_DECLTYPES | sqlite3.PARSE_COLNAMES) as conn:
         cursor = conn.cursor()
         count = cursor.execute("""
         SELECT COUNT(*)
@@ -262,7 +262,7 @@ def review_task():
     except KeyError:
         abort(400)
 
-    with sqlite3.connect('website.db', detect_types=sqlite3.PARSE_DECLTYPES | sqlite3.PARSE_COLNAMES) as conn:
+    with sqlite3.connect('../../website.db', detect_types=sqlite3.PARSE_DECLTYPES | sqlite3.PARSE_COLNAMES) as conn:
         cursor = conn.cursor()
         task = cursor.execute("""
         SELECT email, accepted FROM tasks
@@ -307,4 +307,4 @@ def review_task():
     return Response(status=201, headers=HEADERS)
 
 if __name__ == "__main__":
-    app.run("0.0.0.0")
+    app.run(host="0.0.0.0", port=8000, debug=True)
