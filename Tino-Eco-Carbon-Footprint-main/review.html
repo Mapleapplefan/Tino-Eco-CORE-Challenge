@@ -25,23 +25,48 @@
       
       </ul>
     </nav>
-    <div hidden="" id="contentdiv">
-      <h3>Accept Tasks</h3>
-      <form action="javascript:review_task(document.getElementById('acceptTaskId').value, true, document.getElementById('acceptTaskPoints').value)">
-        <input id='acceptTaskId' type='number' placeholder='submission id' required>
-        <input id='acceptTaskPoints' type='number' placeholder='points' required>
-        <button>Accept Task</button>
-      </form>
-      <h3>Reject Tasks</h3>
-      <form action="javascript:review_task(document.getElementById('rejectTaskId').value, false, 0)">
-        <input id='rejectTaskId' type='number' placeholder='submission id' required>
-        <button>Reject Task</button>
-      </form>
-      <h3>Submitted Tasks</h3>
-      <table id="submittedTasksList"></table>
-      <h3>Accepted Tasks</h3>
-      <table id="acceptedTasksList"></table>
-      <script>fill_task_tables(false)</script>
+    <style>
+      .review-wrap { max-width: 1000px; margin: 32px auto; padding: 16px; }
+      .review-grid { display: grid; grid-template-columns: 1fr; gap: 24px; }
+      .card { background: #fff; padding: 16px; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.08); }
+      .actions { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
+      .actions input { max-width: 180px; }
+      table { width: 100%; border-collapse: collapse; }
+      table th, table td { text-align: left; padding: 10px 12px; border-bottom: 1px solid #eee; }
+      table th { background: #f6f8fa; }
+      h3 { margin: 0 0 12px 0; }
+    </style>
+    <div hidden id="contentdiv" class="review-wrap">
+      <div class="review-grid">
+        <div class="card">
+          <h3>Accept Tasks</h3>
+          <form class="actions" action="javascript:review_task(document.getElementById('acceptTaskId').value, true, document.getElementById('acceptTaskPoints').value)">
+            <input id='acceptTaskId' type='number' placeholder='submission id' required>
+            <input id='acceptTaskPoints' type='number' placeholder='points' required>
+            <button>Accept Task</button>
+          </form>
+        </div>
+        <div class="card">
+          <h3>Reject Tasks</h3>
+          <form class="actions" action="javascript:review_task(document.getElementById('rejectTaskId').value, false, 0)">
+            <input id='rejectTaskId' type='number' placeholder='submission id' required>
+            <button>Reject Task</button>
+          </form>
+        </div>
+        <div class="card">
+          <h3>Submitted Tasks</h3>
+          <table id="submittedTasksList"></table>
+        </div>
+        <div class="card">
+          <h3>Accepted Tasks</h3>
+          <table id="acceptedTasksList"></table>
+        </div>
+        <div class="card">
+          <h3>Users (<span id="userCount">0</span>)</h3>
+          <table id="usersTable"></table>
+        </div>
+      </div>
+      <script>fill_task_tables(false); fill_user_list();</script>
     </div>
     <script>requireOfficer()</script>
   </body>

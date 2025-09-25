@@ -3,44 +3,60 @@
 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
  * Running on all addresses (0.0.0.0)
  * Running on http://127.0.0.1:8000
- * Running on http://192.168.1.123:8000
+ * Running on http://192.168.1.146:8000
 [33mPress CTRL+C to quit[0m
  * Restarting with stat
  * Debugger is active!
  * Debugger PIN: 690-878-574
-127.0.0.1 - - [02/Sep/2025 22:26:28] "GET / HTTP/1.1" 200 -
-127.0.0.1 - - [02/Sep/2025 22:26:28] "GET /leaderboard HTTP/1.1" 200 -
-127.0.0.1 - - [02/Sep/2025 22:27:14] "GET /leaderboard HTTP/1.1" 200 -
-127.0.0.1 - - [02/Sep/2025 22:27:16] "POST /is_officer HTTP/1.1" 200 -
-127.0.0.1 - - [02/Sep/2025 22:27:16] "[33mPOST /user_points HTTP/1.1[0m" 404 -
-127.0.0.1 - - [02/Sep/2025 22:27:16] "POST /is_valid_session HTTP/1.1" 200 -
-127.0.0.1 - - [02/Sep/2025 22:27:16] "POST /accepted_tasks HTTP/1.1" 200 -
-127.0.0.1 - - [02/Sep/2025 22:27:16] "POST /submitted_tasks HTTP/1.1" 200 -
-/Users/gautam/Tino-Eco-CORE-Challenge/Tino-Eco-Carbon-Footprint-main/backend/app.py:133: DeprecationWarning: The default datetime adapter is deprecated as of Python 3.12; see the sqlite3 documentation for suggested replacement recipes
-  cursor.execute("""
-127.0.0.1 - - [02/Sep/2025 22:27:19] "[35m[1mPOST /login HTTP/1.1[0m" 201 -
-/Users/gautam/Tino-Eco-CORE-Challenge/Tino-Eco-Carbon-Footprint-main/backend/app.py:60: DeprecationWarning: The default timestamp converter is deprecated as of Python 3.12; see the sqlite3 documentation for suggested replacement recipes
+127.0.0.1 - - [24/Sep/2025 19:10:50] "POST /is_officer HTTP/1.1" 200 -
+127.0.0.1 - - [24/Sep/2025 19:11:15] "POST /user_points HTTP/1.1" 200 -
+127.0.0.1 - - [24/Sep/2025 19:11:15] "POST /submitted_tasks HTTP/1.1" 200 -
+127.0.0.1 - - [24/Sep/2025 19:11:15] "POST /is_officer HTTP/1.1" 200 -
+127.0.0.1 - - [24/Sep/2025 19:11:15] "POST /accepted_tasks HTTP/1.1" 200 -
+/Users/gautam/Tino-Eco-CORE-Challenge/Tino-Eco-Carbon-Footprint-main/backend/app.py:93: DeprecationWarning: The default timestamp converter is deprecated as of Python 3.12; see the sqlite3 documentation for suggested replacement recipes
   [session_id, email]).fetchone()
-127.0.0.1 - - [02/Sep/2025 22:27:19] "POST /user_points HTTP/1.1" 200 -
-127.0.0.1 - - [02/Sep/2025 22:27:19] "POST /is_valid_session HTTP/1.1" 200 -
-127.0.0.1 - - [02/Sep/2025 22:27:19] "POST /is_officer HTTP/1.1" 200 -
-127.0.0.1 - - [02/Sep/2025 22:27:19] "POST /accepted_tasks HTTP/1.1" 200 -
-127.0.0.1 - - [02/Sep/2025 22:27:19] "POST /submitted_tasks HTTP/1.1" 200 -
-127.0.0.1 - - [02/Sep/2025 22:28:20] "GET /leaderboard HTTP/1.1" 200 -
-127.0.0.1 - - [02/Sep/2025 22:28:22] "POST /is_officer HTTP/1.1" 200 -
-127.0.0.1 - - [02/Sep/2025 22:28:22] "POST /user_points HTTP/1.1" 200 -
-127.0.0.1 - - [02/Sep/2025 22:28:22] "POST /is_valid_session HTTP/1.1" 200 -
-127.0.0.1 - - [02/Sep/2025 22:28:22] "POST /accepted_tasks HTTP/1.1" 200 -
-127.0.0.1 - - [02/Sep/2025 22:28:22] "POST /submitted_tasks HTTP/1.1" 200 -
-127.0.0.1 - - [02/Sep/2025 22:28:45] "POST /is_officer HTTP/1.1" 200 -
-127.0.0.1 - - [02/Sep/2025 22:28:45] "POST /user_points HTTP/1.1" 200 -
-127.0.0.1 - - [02/Sep/2025 22:28:45] "POST /is_valid_session HTTP/1.1" 200 -
-127.0.0.1 - - [02/Sep/2025 22:28:45] "POST /submitted_tasks HTTP/1.1" 200 -
-127.0.0.1 - - [02/Sep/2025 22:28:45] "POST /accepted_tasks HTTP/1.1" 200 -
-127.0.0.1 - - [02/Sep/2025 22:28:46] "GET /leaderboard HTTP/1.1" 200 -
-127.0.0.1 - - [02/Sep/2025 22:30:46] "GET /leaderboard HTTP/1.1" 200 -
-127.0.0.1 - - [02/Sep/2025 22:30:47] "POST /is_officer HTTP/1.1" 200 -
-127.0.0.1 - - [02/Sep/2025 22:30:47] "POST /is_valid_session HTTP/1.1" 200 -
-127.0.0.1 - - [02/Sep/2025 22:30:47] "POST /user_points HTTP/1.1" 200 -
-127.0.0.1 - - [02/Sep/2025 22:30:47] "POST /accepted_tasks HTTP/1.1" 200 -
-127.0.0.1 - - [02/Sep/2025 22:30:47] "POST /submitted_tasks HTTP/1.1" 200 -
+127.0.0.1 - - [24/Sep/2025 19:11:15] "POST /is_valid_session HTTP/1.1" 200 -
+127.0.0.1 - - [24/Sep/2025 19:11:17] "POST /accepted_tasks HTTP/1.1" 200 -
+127.0.0.1 - - [24/Sep/2025 19:11:17] "POST /user_points HTTP/1.1" 200 -
+127.0.0.1 - - [24/Sep/2025 19:11:17] "POST /is_officer HTTP/1.1" 200 -
+127.0.0.1 - - [24/Sep/2025 19:11:17] "POST /is_valid_session HTTP/1.1" 200 -
+127.0.0.1 - - [24/Sep/2025 19:11:17] "POST /submitted_tasks HTTP/1.1" 200 -
+127.0.0.1 - - [24/Sep/2025 19:11:18] "POST /user_points HTTP/1.1" 200 -
+127.0.0.1 - - [24/Sep/2025 19:11:18] "POST /is_valid_session HTTP/1.1" 200 -
+127.0.0.1 - - [24/Sep/2025 19:11:18] "POST /submitted_tasks HTTP/1.1" 200 -
+127.0.0.1 - - [24/Sep/2025 19:11:18] "POST /is_officer HTTP/1.1" 200 -
+127.0.0.1 - - [24/Sep/2025 19:11:18] "POST /accepted_tasks HTTP/1.1" 200 -
+127.0.0.1 - - [24/Sep/2025 19:11:19] "POST /user_points HTTP/1.1" 200 -
+127.0.0.1 - - [24/Sep/2025 19:11:19] "POST /is_officer HTTP/1.1" 200 -
+127.0.0.1 - - [24/Sep/2025 19:11:19] "POST /is_valid_session HTTP/1.1" 200 -
+127.0.0.1 - - [24/Sep/2025 19:11:19] "POST /submitted_tasks HTTP/1.1" 200 -
+127.0.0.1 - - [24/Sep/2025 19:11:19] "POST /accepted_tasks HTTP/1.1" 200 -
+127.0.0.1 - - [24/Sep/2025 19:11:22] "POST /is_officer HTTP/1.1" 200 -
+/Users/gautam/Tino-Eco-CORE-Challenge/Tino-Eco-Carbon-Footprint-main/backend/app.py:166: DeprecationWarning: The default datetime adapter is deprecated as of Python 3.12; see the sqlite3 documentation for suggested replacement recipes
+  cursor.execute("""
+127.0.0.1 - - [24/Sep/2025 19:11:23] "[35m[1mPOST /login HTTP/1.1[0m" 201 -
+127.0.0.1 - - [24/Sep/2025 19:11:23] "POST /is_officer HTTP/1.1" 200 -
+127.0.0.1 - - [24/Sep/2025 19:11:26] "POST /is_officer HTTP/1.1" 200 -
+127.0.0.1 - - [24/Sep/2025 19:11:27] "POST /is_officer HTTP/1.1" 200 -
+127.0.0.1 - - [24/Sep/2025 19:11:28] "[35m[1mPOST /login HTTP/1.1[0m" 201 -
+127.0.0.1 - - [24/Sep/2025 19:11:28] "POST /is_officer HTTP/1.1" 200 -
+127.0.0.1 - - [24/Sep/2025 19:11:29] "POST /is_officer HTTP/1.1" 200 -
+127.0.0.1 - - [24/Sep/2025 19:11:34] "POST /is_officer HTTP/1.1" 200 -
+127.0.0.1 - - [24/Sep/2025 19:11:40] "OPTIONS /forgot_password HTTP/1.1" 200 -
+127.0.0.1 - - [24/Sep/2025 19:12:03] "[35m[1mPOST /login HTTP/1.1[0m" 201 -
+127.0.0.1 - - [24/Sep/2025 19:12:03] "POST /is_officer HTTP/1.1" 200 -
+127.0.0.1 - - [24/Sep/2025 19:12:07] "POST /is_officer HTTP/1.1" 200 -
+127.0.0.1 - - [24/Sep/2025 19:12:07] "GET /leaderboard HTTP/1.1" 200 -
+127.0.0.1 - - [24/Sep/2025 19:12:07] "POST /user_points HTTP/1.1" 200 -
+127.0.0.1 - - [24/Sep/2025 19:12:07] "POST /accepted_tasks HTTP/1.1" 200 -
+127.0.0.1 - - [24/Sep/2025 19:12:07] "POST /submitted_tasks HTTP/1.1" 200 -
+127.0.0.1 - - [24/Sep/2025 19:12:07] "POST /is_valid_session HTTP/1.1" 200 -
+127.0.0.1 - - [24/Sep/2025 19:12:07] "POST /is_officer HTTP/1.1" 200 -
+127.0.0.1 - - [24/Sep/2025 19:14:15] "[35m[1mPOST /login HTTP/1.1[0m" 201 -
+127.0.0.1 - - [24/Sep/2025 19:14:15] "POST /is_officer HTTP/1.1" 200 -
+127.0.0.1 - - [24/Sep/2025 19:14:17] "POST /submitted_tasks HTTP/1.1" 200 -
+127.0.0.1 - - [24/Sep/2025 19:14:17] "POST /accepted_tasks HTTP/1.1" 200 -
+127.0.0.1 - - [24/Sep/2025 19:14:17] "POST /is_officer HTTP/1.1" 200 -
+127.0.0.1 - - [24/Sep/2025 19:14:17] "POST /is_valid_session HTTP/1.1" 200 -
+127.0.0.1 - - [24/Sep/2025 19:14:17] "POST /is_officer HTTP/1.1" 200 -
+127.0.0.1 - - [24/Sep/2025 19:14:17] "POST /user_list HTTP/1.1" 200 -

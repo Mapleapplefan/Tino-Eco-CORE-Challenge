@@ -1,0 +1,203 @@
+::ffff:127.0.0.1 - - [14/Sep/2025 19:54:17] "GET /review.html HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [14/Sep/2025 19:54:41] "GET /review.html HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [14/Sep/2025 19:54:41] "GET /style.css HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [14/Sep/2025 19:54:41] "GET /scripts/authentication.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [14/Sep/2025 19:54:41] "GET /scripts/api.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [14/Sep/2025 19:54:41] "GET /images/TinoEcoLogo.png HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [14/Sep/2025 19:54:41] "GET /images/account.png HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [14/Sep/2025 19:54:41] "GET /oops.html HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [14/Sep/2025 19:54:41] "GET /images/undraw_fixing_bugs_w7gi.png HTTP/1.1" 200 -
+----------------------------------------
+Exception occurred during processing of request from ('::ffff:127.0.0.1', 58370, 0, 0)
+Traceback (most recent call last):
+  File "/usr/local/Cellar/python@3.13/3.13.5/Frameworks/Python.framework/Versions/3.13/lib/python3.13/socketserver.py", line 697, in process_request_thread
+    self.finish_request(request, client_address)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/Cellar/python@3.13/3.13.5/Frameworks/Python.framework/Versions/3.13/lib/python3.13/http/server.py", line 1320, in finish_request
+    self.RequestHandlerClass(request, client_address, self,
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                             directory=args.directory)
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/Cellar/python@3.13/3.13.5/Frameworks/Python.framework/Versions/3.13/lib/python3.13/http/server.py", line 672, in __init__
+    super().__init__(*args, **kwargs)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/usr/local/Cellar/python@3.13/3.13.5/Frameworks/Python.framework/Versions/3.13/lib/python3.13/socketserver.py", line 766, in __init__
+    self.handle()
+    ~~~~~~~~~~~^^
+  File "/usr/local/Cellar/python@3.13/3.13.5/Frameworks/Python.framework/Versions/3.13/lib/python3.13/http/server.py", line 436, in handle
+    self.handle_one_request()
+    ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/usr/local/Cellar/python@3.13/3.13.5/Frameworks/Python.framework/Versions/3.13/lib/python3.13/http/server.py", line 424, in handle_one_request
+    method()
+    ~~~~~~^^
+  File "/usr/local/Cellar/python@3.13/3.13.5/Frameworks/Python.framework/Versions/3.13/lib/python3.13/http/server.py", line 679, in do_GET
+    self.copyfile(f, self.wfile)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/usr/local/Cellar/python@3.13/3.13.5/Frameworks/Python.framework/Versions/3.13/lib/python3.13/http/server.py", line 881, in copyfile
+    shutil.copyfileobj(source, outputfile)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/Cellar/python@3.13/3.13.5/Frameworks/Python.framework/Versions/3.13/lib/python3.13/shutil.py", line 204, in copyfileobj
+    fdst_write(buf)
+    ~~~~~~~~~~^^^^^
+  File "/usr/local/Cellar/python@3.13/3.13.5/Frameworks/Python.framework/Versions/3.13/lib/python3.13/socketserver.py", line 845, in write
+    self._sock.sendall(b)
+    ~~~~~~~~~~~~~~~~~~^^^
+BrokenPipeError: [Errno 32] Broken pipe
+----------------------------------------
+::ffff:127.0.0.1 - - [14/Sep/2025 19:54:41] "GET /images/undraw_fixing_bugs_w7gi.png HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [14/Sep/2025 19:54:41] "GET /images/TinoEcoIconTransparentBackground.png HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [14/Sep/2025 19:55:39] "GET /oops.html HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [14/Sep/2025 19:55:40] "GET /oops.html HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [14/Sep/2025 19:55:58] "GET /review.html HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [14/Sep/2025 19:55:58] "GET /scripts/api.js HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [14/Sep/2025 19:55:58] "GET /index.html HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [14/Sep/2025 19:56:00] "GET /account.html HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [14/Sep/2025 19:56:00] "GET /css/account.css HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [14/Sep/2025 19:56:06] "GET /images/undraw_building_websites_i78t.png HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [14/Sep/2025 19:56:06] "GET /images/placeholderMain.jpg HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [14/Sep/2025 19:56:07] "GET /images/undraw_Researching_re_fuod.png HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [14/Sep/2025 19:56:07] "GET /images/SVCEicon.png HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [14/Sep/2025 19:56:07] "GET /images/undraw_Social_media_re_sulg.png HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [14/Sep/2025 19:56:07] "GET /images/acterra.png HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [14/Sep/2025 19:56:08] "GET /submit.html HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [14/Sep/2025 19:56:08] "GET /css/submit.css HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [14/Sep/2025 19:56:25] "GET /leaderboard.html HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [14/Sep/2025 19:56:26] "GET /map.html HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [14/Sep/2025 19:56:26] "GET /scripts/map.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [14/Sep/2025 19:56:27] code 404, message File not found
+::ffff:127.0.0.1 - - [14/Sep/2025 19:56:27] "GET /favicon.ico HTTP/1.1" 404 -
+::ffff:127.0.0.1 - - [14/Sep/2025 19:56:29] "GET /about.html HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [14/Sep/2025 19:56:29] "GET /images/undraw_environment_iaus.png HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [14/Sep/2025 19:56:30] "GET /tasks.html HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [14/Sep/2025 19:56:30] "GET /css/tasks.css HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [14/Sep/2025 19:56:30] "GET /scripts/script.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [14/Sep/2025 19:56:30] "GET /blog.html HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [14/Sep/2025 19:56:34] "GET /prizes.html HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [14/Sep/2025 19:56:34] "GET /css/prizes.css HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [14/Sep/2025 19:56:34] "GET /images/signup.webp HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [14/Sep/2025 19:56:34] "GET /images/5giftcard.webp HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [14/Sep/2025 19:56:34] "GET /images/plasticstraws.png HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [14/Sep/2025 19:56:34] "GET /images/coloringbags.png HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [14/Sep/2025 19:56:34] "GET /images/strawsstuff.png HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [14/Sep/2025 19:56:34] "GET /images/producebags.png HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [14/Sep/2025 19:56:34] "GET /images/10giftcard.webp HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [14/Sep/2025 19:56:34] "GET /images/SOAP.png HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [14/Sep/2025 19:56:34] "GET /images/pencils.png HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [14/Sep/2025 19:56:34] "GET /images/yeet.png HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [14/Sep/2025 19:56:34] "GET /images/yeetus.png HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [14/Sep/2025 19:56:34] "GET /images/50giftcard.webp HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [14/Sep/2025 19:56:34] "GET /images/undraw_Gaming_re_cma2.png HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [14/Sep/2025 19:57:33] "GET /review.html HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [14/Sep/2025 19:57:33] "GET /scripts/api.js HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [24/Sep/2025 19:06:34] "GET /review.html HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [24/Sep/2025 19:06:34] "GET /style.css HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [24/Sep/2025 19:06:34] "GET /scripts/api.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [24/Sep/2025 19:06:34] "GET /images/TinoEcoLogo.png HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [24/Sep/2025 19:06:34] "GET /scripts/authentication.js HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [24/Sep/2025 19:06:34] "GET /images/account.png HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [24/Sep/2025 19:06:34] code 404, message File not found
+::ffff:127.0.0.1 - - [24/Sep/2025 19:06:34] "GET /favicon.ico HTTP/1.1" 404 -
+::ffff:127.0.0.1 - - [24/Sep/2025 19:06:36] "GET /index.html HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [24/Sep/2025 19:06:36] "GET /images/placeholderMain.jpg HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [24/Sep/2025 19:06:36] "GET /images/undraw_building_websites_i78t.png HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [24/Sep/2025 19:06:36] "GET /images/undraw_Researching_re_fuod.png HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [24/Sep/2025 19:06:36] "GET /images/undraw_Social_media_re_sulg.png HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [24/Sep/2025 19:06:36] "GET /images/SVCEicon.png HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [24/Sep/2025 19:06:36] "GET /images/acterra.png HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [24/Sep/2025 19:06:36] "GET /images/TinoEcoIconTransparentBackground.png HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [24/Sep/2025 19:06:38] "GET /account.html HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [24/Sep/2025 19:06:38] "GET /css/account.css HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [24/Sep/2025 19:06:41] "GET /submit.html HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [24/Sep/2025 19:06:41] "GET /css/submit.css HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [24/Sep/2025 19:06:45] "GET /about.html HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [24/Sep/2025 19:06:45] "GET /images/undraw_environment_iaus.png HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [24/Sep/2025 19:06:45] "GET /images/undraw_fixing_bugs_w7gi.png HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [24/Sep/2025 19:06:49] "GET /tasks.html HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [24/Sep/2025 19:06:49] "GET /css/tasks.css HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [24/Sep/2025 19:06:49] "GET /scripts/script.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [24/Sep/2025 19:11:13] "GET /about.html HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [24/Sep/2025 19:11:13] "GET /images/account.png HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [24/Sep/2025 19:11:13] "GET /images/TinoEcoLogo.png HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [24/Sep/2025 19:11:13] "GET /style.css HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [24/Sep/2025 19:11:13] "GET /images/undraw_fixing_bugs_w7gi.png HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [24/Sep/2025 19:11:13] "GET /scripts/authentication.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [24/Sep/2025 19:11:13] "GET /images/undraw_environment_iaus.png HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [24/Sep/2025 19:11:13] "GET /images/SVCEicon.png HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [24/Sep/2025 19:11:13] "GET /images/acterra.png HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [24/Sep/2025 19:11:13] "GET /images/undraw_Researching_re_fuod.png HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [24/Sep/2025 19:11:13] "GET /images/undraw_building_websites_i78t.png HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [24/Sep/2025 19:11:13] "GET /images/undraw_Social_media_re_sulg.png HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [24/Sep/2025 19:11:13] "GET /images/TinoEcoIconTransparentBackground.png HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [24/Sep/2025 19:11:14] "GET /about.html HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [24/Sep/2025 19:11:14] "GET /style.css HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [24/Sep/2025 19:11:14] "GET /images/account.png HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [24/Sep/2025 19:11:14] "GET /scripts/authentication.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [24/Sep/2025 19:11:14] "GET /images/undraw_environment_iaus.png HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [24/Sep/2025 19:11:14] "GET /images/TinoEcoLogo.png HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [24/Sep/2025 19:11:14] "GET /images/undraw_fixing_bugs_w7gi.png HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [24/Sep/2025 19:11:14] "GET /images/acterra.png HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [24/Sep/2025 19:11:14] "GET /images/SVCEicon.png HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [24/Sep/2025 19:11:14] "GET /images/undraw_Researching_re_fuod.png HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [24/Sep/2025 19:11:14] "GET /images/undraw_building_websites_i78t.png HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [24/Sep/2025 19:11:14] "GET /images/undraw_Social_media_re_sulg.png HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [24/Sep/2025 19:11:14] "GET /images/TinoEcoIconTransparentBackground.png HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [24/Sep/2025 19:11:17] "GET /submit.html HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [24/Sep/2025 19:11:17] "GET /style.css HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [24/Sep/2025 19:11:17] "GET /scripts/authentication.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [24/Sep/2025 19:11:17] "GET /images/TinoEcoLogo.png HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [24/Sep/2025 19:11:17] "GET /images/account.png HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [24/Sep/2025 19:11:17] "GET /css/submit.css HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [24/Sep/2025 19:11:17] "GET /scripts/api.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [24/Sep/2025 19:11:17] "GET /images/TinoEcoIconTransparentBackground.png HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [24/Sep/2025 19:11:18] "GET /submit.html HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [24/Sep/2025 19:11:18] "GET /style.css HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [24/Sep/2025 19:11:18] "GET /css/submit.css HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [24/Sep/2025 19:11:18] "GET /scripts/authentication.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [24/Sep/2025 19:11:18] "GET /scripts/api.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [24/Sep/2025 19:11:18] "GET /images/TinoEcoLogo.png HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [24/Sep/2025 19:11:18] "GET /images/account.png HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [24/Sep/2025 19:11:18] "GET /images/TinoEcoIconTransparentBackground.png HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [24/Sep/2025 19:11:19] "GET /submit.html HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [24/Sep/2025 19:11:19] "GET /style.css HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [24/Sep/2025 19:11:19] "GET /css/submit.css HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [24/Sep/2025 19:11:19] "GET /scripts/api.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [24/Sep/2025 19:11:19] "GET /scripts/authentication.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [24/Sep/2025 19:11:19] "GET /images/TinoEcoLogo.png HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [24/Sep/2025 19:11:19] "GET /images/account.png HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [24/Sep/2025 19:11:19] "GET /images/TinoEcoIconTransparentBackground.png HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [24/Sep/2025 19:11:23] "GET /index.html HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [24/Sep/2025 19:11:26] "GET /index.html HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [24/Sep/2025 19:11:26] "GET /style.css HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [24/Sep/2025 19:11:26] "GET /scripts/api.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [24/Sep/2025 19:11:26] "GET /images/TinoEcoLogo.png HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [24/Sep/2025 19:11:26] "GET /images/account.png HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [24/Sep/2025 19:11:26] "GET /images/undraw_building_websites_i78t.png HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [24/Sep/2025 19:11:26] "GET /images/placeholderMain.jpg HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [24/Sep/2025 19:11:26] "GET /images/undraw_Researching_re_fuod.png HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [24/Sep/2025 19:11:26] "GET /images/undraw_Social_media_re_sulg.png HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [24/Sep/2025 19:11:26] "GET /images/acterra.png HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [24/Sep/2025 19:11:26] "GET /images/SVCEicon.png HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [24/Sep/2025 19:11:26] "GET /images/TinoEcoIconTransparentBackground.png HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [24/Sep/2025 19:11:34] "GET /forgot.html HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [24/Sep/2025 19:12:03] "GET /index.html HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [24/Sep/2025 19:12:06] "GET /leaderboard.html HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [24/Sep/2025 19:12:09] "GET /prizes.html HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [24/Sep/2025 19:12:09] "GET /css/prizes.css HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [24/Sep/2025 19:12:09] "GET /images/5giftcard.webp HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [24/Sep/2025 19:12:09] "GET /images/signup.webp HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [24/Sep/2025 19:12:09] "GET /images/plasticstraws.png HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [24/Sep/2025 19:12:09] "GET /images/strawsstuff.png HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [24/Sep/2025 19:12:09] "GET /images/coloringbags.png HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [24/Sep/2025 19:12:09] "GET /images/producebags.png HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [24/Sep/2025 19:12:09] "GET /images/10giftcard.webp HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [24/Sep/2025 19:12:09] "GET /images/SOAP.png HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [24/Sep/2025 19:12:09] "GET /images/pencils.png HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [24/Sep/2025 19:12:09] "GET /images/yeet.png HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [24/Sep/2025 19:12:09] "GET /images/yeetus.png HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [24/Sep/2025 19:12:09] "GET /images/50giftcard.webp HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [24/Sep/2025 19:12:09] "GET /images/undraw_Gaming_re_cma2.png HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [24/Sep/2025 19:13:45] "HEAD /index.html HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [24/Sep/2025 19:13:45] "GET /index.html HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [24/Sep/2025 19:14:12] "GET /index.html HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [24/Sep/2025 19:14:17] code 404, message File not found
+::ffff:127.0.0.1 - - [24/Sep/2025 19:14:17] "GET /favicon.ico HTTP/1.1" 404 -

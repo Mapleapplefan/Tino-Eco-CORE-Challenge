@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Forgot Password - CORE Challenge</title>
+  <link href="style.css" rel="stylesheet">
+  <link rel="shortcut icon" href="images/TinoEcoIconTransparentBackground.png" />
+</head>
+<body>
+  <script src="scripts/api.js"></script>
+  <nav>
+    <ul id="nav">
+      <a href="index.html"> <img id="logo" src="images/TinoEcoLogo.png"></a>
+      <a href="about.html" class="linknav"> About </a>
+      <a href="tasks.html" class="linknav"> Tasks </a>
+      <a href="blog.html" class="linknav"> Blog </a>
+      <a href="leaderboard.html" class="linknav"> Leaderboard </a>
+      <a href="submit.html" class="linknav"> Submit </a>
+      <a href="prizes.html" class="linknav"> Prizes </a>
+      <a href="map.html" class="linknav"> Map </a>
+      <a href="account.html" class="linknav"> <img src="images/account.png" class="profileimg"></a>
+    </ul>
+  </nav>
+
+  <div style="max-width:480px;margin:40px auto;padding:24px;background:#fff;border-radius:8px">
+    <h2>Forgot your password?</h2>
+    <p>Enter your email and we'll send a reset link.</p>
+    <form action="javascript:requestReset()">
+      <label for="email">Email</label>
+      <input type="email" id="email" placeholder="you@example.com" required>
+      <button type="submit">Send reset link</button>
+    </form>
+    <p id="msg" style="margin-top:10px"></p>
+  </div>
+
+  <script>
+    function requestReset(){
+      const email = document.getElementById('email').value;
+      const xhr = new XMLHttpRequest();
+      xhr.open('POST', `${apiURL}forgot_password`);
+      xhr.setRequestHeader('Content-Type','application/json');
+      xhr.onreadystatechange = function(){
+        if(xhr.readyState === XMLHttpRequest.DONE){
+          document.getElementById('msg').textContent = 'If an account exists, a reset email was sent.';
+        }
+      };
+      xhr.onerror = function(){
+        document.getElementById('msg').textContent = 'If an account exists, a reset email was sent.';
+      };
+      xhr.send(JSON.stringify({email}));
+    }
+  </script>
+</body>
+</html>
+

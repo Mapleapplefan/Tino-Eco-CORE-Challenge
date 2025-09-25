@@ -1,4 +1,4 @@
-const apiURL = "http://127.0.0.1:8000/"
+const apiURL = (location.hostname === '127.0.0.1' || location.hostname === 'localhost') ? 'http://127.0.0.1:8000/' : '/api/'
 
 function create_account(name, email, password) {
     const xhr = new XMLHttpRequest();
@@ -172,36 +172,8 @@ function fill_leaderboard() {
 }
 
 function fill_task_tables(submit=true) {
-    if (!submit) {
-        actuallyFillTasks();
-    }
-    else {
-        const xhr = new XMLHttpRequest();
-        xhr.open(
-            "POST",
-            `${apiURL}is_officer`
-        );
-        const body = JSON.stringify({
-            "email": sessionStorage.getItem("email"),
-        });
-        xhr.addEventListener("readystatechange", function() {
-            if (this.readyState == this.DONE) {
-                if (xhr.status == 200) {
-                    const data = JSON.parse(xhr.responseText);
-                    if (data["is_officer"]) {
-                        window.location.href = "review.html";
-                    }
-                    else {
-                        actuallyFillTasks();
-                    }
-                }
-            }
-        });
-        xhr.onerror = function(e){
-            window.location.href = "oops.html";
-        };
-        xhr.send(body);
-    }
+    // Always show user's own tables; officers can still access Submit page
+    actuallyFillTasks();
 }
 
 function actuallyFillTasks() {
@@ -216,9 +188,9 @@ function actuallyFillTasks() {
     xhr.onload = () => {
         if (xhr.readyState == 4 && xhr.status == 200) {
             const data = JSON.parse(xhr.responseText)["data"];
-            var tableHtml = "<tr><th>Submission ID</th><th>Task ID</th><th>Submission</th></tr>";
+            var tableHtml = "<tr><th>Submission ID</th><th>Task ID</th><th>Name</th><th>Email</th><th>Submission</th></tr>";
             for (var i = 0; i < data.length; i++) {
-                tableHtml += `<tr><td>${data[i]["submission_id"]}</td><td>${data[i]["task_id"]}</td><td>${data[i]["submission"]}</td></tr>`;
+                tableHtml += `<tr><td>${data[i]["submission_id"]}</td><td>${data[i]["task_id"]}</td><td>${data[i]["name"] || ""}</td><td>${data[i]["email"]}</td><td>${data[i]["submission"]}</td></tr>`;
             }
             document.getElementById("acceptedTasksList").innerHTML = tableHtml;
         }
@@ -231,9 +203,9 @@ function actuallyFillTasks() {
     xhr2.onload = () => {
         if (xhr2.readyState == 4 && xhr2.status == 200) {
             const data = JSON.parse(xhr2.responseText)["data"];
-            var tableHtml = "<tr><th>Submission ID</th><th>Task ID</th><th>Submission</th></tr>";
+            var tableHtml = "<tr><th>Submission ID</th><th>Task ID</th><th>Name</th><th>Email</th><th>Submission</th></tr>";
             for (var i = 0; i < data.length; i++) {
-                tableHtml += `<tr><td>${data[i]["submission_id"]}</td><td>${data[i]["task_id"]}</td><td>${data[i]["submission"]}</td></tr>`;
+                tableHtml += `<tr><td>${data[i]["submission_id"]}</td><td>${data[i]["task_id"]}</td><td>${data[i]["name"] || ""}</td><td>${data[i]["email"]}</td><td>${data[i]["submission"]}</td></tr>`;
             }
             document.getElementById("submittedTasksList").innerHTML = tableHtml;
         }
@@ -247,6 +219,42 @@ function actuallyFillTasks() {
     xhr.send(body);
     xhr2.send(body);
 }
+
+function injectOfficerReviewTab() {
+    const nav = document.getElementById("nav");
+    if (!nav) return;
+    const email = sessionStorage.getItem("email");
+    if (!email) return;
+    const xhr = new XMLHttpRequest();
+    xhr.open("POST", `${apiURL}is_officer`);
+    xhr.onload = () => {
+        if (xhr.readyState == 4 && xhr.status == 200) {
+            try {
+                const data = JSON.parse(xhr.responseText);
+                if (data["is_officer"]) {
+                    const existing = Array.from(nav.querySelectorAll('a')).find(a => a.getAttribute('href') === 'review.html');
+                    if (!existing) {
+                        const review = document.createElement('a');
+                        review.setAttribute('href', 'review.html');
+                        review.setAttribute('class', 'linknav');
+                        review.textContent = ' Review ';
+                        const accountLink = Array.from(nav.querySelectorAll('a')).find(a => a.getAttribute('href') === 'account.html');
+                        if (accountLink && accountLink.parentNode === nav) {
+                            nav.insertBefore(review, accountLink);
+                        } else {
+                            nav.appendChild(review);
+                        }
+                    }
+                }
+            } catch(e) {}
+        }
+    };
+    xhr.send(JSON.stringify({"email": email}));
+}
+
+document.addEventListener('DOMContentLoaded', function(){
+    try { injectOfficerReviewTab(); } catch(e) {}
+});
 
 function setUserPoints() {
     const xhr = new XMLHttpRequest();
@@ -264,5 +272,34 @@ function setUserPoints() {
             document.getElementById("pointsH3").innerHTML = pointsHtml;
         }
     }
+    xhr.send(body);
+}
+
+function fill_user_list() {
+    const xhr = new XMLHttpRequest();
+    xhr.open(
+        "POST",
+        `${apiURL}user_list`,
+    );
+    const body = JSON.stringify({
+        "email": sessionStorage.getItem("email"),
+    });
+    xhr.onload = () => {
+        if (xhr.readyState == 4 && xhr.status == 200) {
+            const res = JSON.parse(xhr.responseText);
+            const users = res["data"];
+            if (document.getElementById("userCount")) {
+                document.getElementById("userCount").textContent = res["count"];
+            }
+            if (document.getElementById("usersTable")) {
+                var tableHtml = "<tr><th>Email</th><th>Name</th><th>Points</th></tr>";
+                for (var i = 0; i < users.length; i++) {
+                    tableHtml += `<tr><td>${users[i]["email"]}</td><td>${users[i]["name"] || ""}</td><td>${users[i]["points"] || 0}</td></tr>`;
+                }
+                document.getElementById("usersTable").innerHTML = tableHtml;
+            }
+        }
+    }
+    xhr.onerror = function(e){};
     xhr.send(body);
 }
